@@ -9,6 +9,5 @@ router.post('/registroUser', postUsers)
 router.post('/login', getloginSkater)
 router.get('/admiRuta', requireAuth , getAmi)
 
-//profe me funciona el codigo sólo cuanto comento o borro esa linea de codigo
-//Mi intencion es lograr que me funcione el INICIAR SESIÓN.
+
 module.exports = router;

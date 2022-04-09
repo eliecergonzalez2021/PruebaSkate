@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
 })
 
 router.get("/login", (req, res) => {
-    res.render("iniciarSeccion")
+    res.render("iniciarSesion")
 })
 
 router.get("/registroUser", (req, res) => {
@@ -16,19 +16,16 @@ router.get("/registroUser", (req, res) => {
 })
 
 
-router.get("/registrarperfil", (req, res) => {
+router.get("/editarPerfil", (req, res) => {
     res.render("registroPerfil")
 })
 
-router.get("/admiRuta", async (req, res) => {
-    const rows = await getSkaterAdmiDB()
-    res.render("admi", {rows})
+
+router.get("/admi", (req, res) => {
+    res.render("admi")
 })
 
-/*router.put("/editarPerfil", (req, res) => {
-    res.render("editar")
-})
-router.delete("/eliminarPerfil", (req, res) => {
+/*router.delete("/eliminarPerfil", (req, res) => {
     res.render("eliminar")
 })*/
 

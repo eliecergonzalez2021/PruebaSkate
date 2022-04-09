@@ -24,3 +24,7 @@ body {
   input{
       text-align: center;
   }
+
+  tbody tr:nth-child(1) td div {
+      background-image: url("/public/img/tony.jpg");
+  }

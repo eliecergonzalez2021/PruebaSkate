@@ -18,13 +18,35 @@
     </thead>
     <tbody>
         <tr>
-        {{#each rows}}
-        <th scope="row">🛹</th>
-        <td><div style="background-image: url('/img/{{this.foto}}')"></div></td>
-        <td>{{this.nombre}}</td>
-        <td>{{this.anos_experiencia}}</td>
-        <td>{{this.especialidad}}</td>
-        <td id="check"><input type="checkbox" name="check" checked data-check="true"/></td>
+            <th scope="row">1</th>
+            <td><div></div></td>
+            <td>Tony Hawk</td>
+            <td>12</td>
+            <td>Kickflip</td>
+            <td><input type="checkbox" checked /></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><div></div></td>
+            <td>Evelien Bouilliart</td>
+            <td>10</td>
+            <td>Heelflip</td>
+            <td><input type="checkbox" checked /></td>
+          </tr>
+          <th scope="row">3</th>
+            <td><div></div></td>
+            <td>Danny Way</td>
+            <td>8</td>
+            <td>Ollie</td>
+            <td><input type="checkbox" /></td>
+        <tr>
+            {{#each rows}}
+            <th scope="row">🍔</th>
+            <td><div style="background-image: url('/img/{{this.foto}}')"></div></td>
+            <td>{{this.nombre}}</td>
+            <td>{{this.anos_experiencia}}</td>
+            <td>{{this.especialidad}}</td>
+            <td id="check"><input type="checkbox" name="check" checked data-check="true"/></td>
         </tr>
        {{/each}}
     </tbody>
