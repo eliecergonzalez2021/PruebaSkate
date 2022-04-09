@@ -128,7 +128,7 @@ const migrar = () => {
     .finally(() => pool.end())
 }
 
-
+ 
 
 module.exports = {
     getSkatersDB,
