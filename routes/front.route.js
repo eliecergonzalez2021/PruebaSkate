@@ -20,7 +20,17 @@ router.get("/registrarperfil", (req, res) => {
     res.render("registroPerfil")
 })
 
+router.get("/admiRuta", async (req, res) => {
+    const rows = await getSkaterAdmiDB()
+    res.render("admi", {rows})
+})
 
+/*router.put("/editarPerfil", (req, res) => {
+    res.render("editar")
+})
+router.delete("/eliminarPerfil", (req, res) => {
+    res.render("eliminar")
+})*/
 
 
 module.exports = router

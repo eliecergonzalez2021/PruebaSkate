@@ -109,7 +109,7 @@ const getSkaterAdmiDB=async (email)=>{
     }
 }
 
-/*const deleteSkatersDB = async({id})=>{
+const deleteSkatersDB = async({id})=>{
     const values =[id]
     return pool.query( "DELETE FROM skaters where id = $1",values)
 }
@@ -117,7 +117,7 @@ const getSkaterAdmiDB=async (email)=>{
 const updateSkatersDB = async ({nombre,anos_experiencia,especialidad,id}) =>{
     const values = [nombre,anos_experiencia,especialidad,id]
     return pool.query("UPDATE skaters SET nombre = $1, anos_experiencia = $2, especialidad = $3 where email = $4 RETURNING *", values)
-}*/
+}
 
 const migrar = () => {
     const data = fs.readFileSync(path.join(__dirname, 'migracion.sql'), {encoding: "utf-8"})
@@ -135,7 +135,7 @@ module.exports = {
     postSkatersDB,
     migrar,
     getSkaterAdmiDB,
-    //deleteSkatersDB,
-    //updateSkatersDB,
+    deleteSkatersDB,
+    updateSkatersDB,
     getLoginDB
 }

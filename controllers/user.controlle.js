@@ -27,11 +27,11 @@ const postUsers = async (req, res) => {
     //guardar foto
     foto.mv(path.join(__dirname,"../public/img", pathFoto), async(err)=>{
         if(err) return next(err)       
-        res.json({ok: true, msg: "todo listo"})
+        res.json({ok: true, msg: "todo listo 👌"})
     })
-    
+     
     req.body.foto = pathFoto
-    req.password = hash
+    req.body.password = hash
 
     const respuesta = await postSkatersDB(req.body)
         
@@ -121,6 +121,7 @@ const getAmi = async(req, res) =>{
     // .then(rows => res.json({ok: true, skaters: rows}))
     // .catch (error => res.json({ok: false, msg: error})) 
 //}
+
 
 
 module.exports={
