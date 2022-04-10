@@ -1,5 +1,5 @@
 
-/*module.export.validacionesPostUsers =  (req, res) => {
+module.export.validacionesPostUsers =  (req, res) => {
 try {
         //validacion del envio
     if(
@@ -58,6 +58,6 @@ try {
         })
     }
 
-}*/
+}
 
 
