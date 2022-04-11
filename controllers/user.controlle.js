@@ -46,9 +46,7 @@ const postUsers = async (req, res) => {
 const getloginSkater=async (req, res) =>{
 
     const { email, password } = req.body;
-    //const email = emaillogin;
-    //const password = passwordlogin;
-
+    
     try {
          
         // validar campos del body
@@ -66,12 +64,7 @@ const getloginSkater=async (req, res) =>{
         if (skaters.email !== email) {
             throw new Error("No existe el email registrado");
         }
-        // ver si el password coincide con el pass del DB
-        /*const comparePassword = await bcryptjs.compare(password, skaters.password);
-        if (!comparePassword) {
-            console.log('contraseña incorrecta');
-            res.json({res:"la contraseña incorrecta"})
-        }*/
+        
 
         // generar JWT
         const payload = { id: skaters.id };

@@ -25,9 +25,9 @@ router.get("/admi", (req, res) => {
     res.render("admi")
 })
 
-/*router.delete("/eliminarPerfil", (req, res) => {
+router.delete("/eliminarPerfil", (req, res) => {
     res.render("eliminar")
-})*/
+})
 
 
 module.exports = router
